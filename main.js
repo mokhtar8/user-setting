@@ -13,17 +13,34 @@ sett.addEventListener('click' , ()=>{
       }
  
 })
+var arr = document.querySelectorAll('.inputs'); 
+
+
+  window.onload = function(){
+     var saver =localStorage.getItem("fild");
+     if (saver){
+
+    document.getElementById('inputs').value=saver 
+   document.getElementById('inps').value=saver
+     }
+  }
+button.addEventListener('click' , function(){
+
+
+
+arr.forEach(e => {
 var inputs = document.getElementById('inputs'); 
 var inps = document.getElementById('inps'); 
-button.addEventListener('click' , ()=>{
 
-const obj ={
+  const obj ={
     c:inputs.value,
     b:inps.value
 }
-
-
 localStorage.setItem('fild', JSON.stringify(obj));
-var data =JSON.parse(localStorage.getItem('fild'));
-console.log(data);
+
+
+});
+
+
+
 })
